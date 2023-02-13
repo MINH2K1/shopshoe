@@ -1,0 +1,17 @@
+.container{
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lock_content{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top:70px;
+    width: 90%;
+}
+

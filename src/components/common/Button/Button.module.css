@@ -1,0 +1,20 @@
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 5px;
+    background-color: red;
+    z-index: 100;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: red;
+    background-color: #fff;
+    transition: 0.4s;
+}

@@ -1,0 +1,14 @@
+.buttonsquare{
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+.buttonsquare:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: red;
+    box-shadow: 0 0 8px rgba(0,0,0,0.8);
+
+}
