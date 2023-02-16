@@ -1,8 +1,8 @@
-import React, { useReducer, useRef } from "react";
+import React, { useReducer } from "react";
 import Quantity from "../Quantity/Quantity";
 import style from "./ProductCart.module.css";
 import Button from "../ButtonSquare/ButtonSquare.js";
-function ProductCart({ removeProduct, data }) {
+function ProductCart({ removeProduct, data,totalfn }) {
   const UP_ACTION = "up";
   const DOWN_ACTION = "down";
   var initstate = data.quantity
@@ -20,17 +20,14 @@ function ProductCart({ removeProduct, data }) {
   };
   const [counts, dispatch] = useReducer(reducer,initstate);
   data.quantity=counts
-
-
-
-
-  function IncreaseCartQuantity() {
-   
-    dispatch(UP_ACTION);
+  const IncreaseCartQuantity=async()=> {
+    await dispatch(UP_ACTION);
+    totalfn()
   }
-  function DecreaseCartQuantity() {
+  const  DecreaseCartQuantity= async()=> {
     if(counts>1)
-    dispatch(DOWN_ACTION);
+   await dispatch(DOWN_ACTION);
+    totalfn()
   }
 
   return (
@@ -47,8 +44,8 @@ function ProductCart({ removeProduct, data }) {
           quantity={data.quantity}
         ></Quantity>
       </td>
-      <td>{data.price}</td>
-      <td>{data.price * data?.quantity}</td>
+      <td>{data.price} đ</td>
+      <td>{data.price * data?.quantity} đ</td>
       <td>
         <Button
           onClick={() => {

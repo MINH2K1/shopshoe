@@ -10,3 +10,14 @@
 .cart_name{
     width: 300px;
 }
+
+.buynow{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background-color: orange !important;
+    width: 200px;
+}
+table{
+    margin-bottom: 50px;
+}

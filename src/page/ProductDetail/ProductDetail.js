@@ -1,10 +1,17 @@
 import style from "./ProductDetail.module.css";
-import React from "react"
+import React, { useState } from "react"
 import UrlLink from "../../components/common/UrlLink/UrlLink";
 import ButtonSquare from "../../components/common/ButtonSquare/ButtonSquare";
 
 function ProductDetail({product,handelAddCart}) {
-
+  const[quantity,setQuantity]=useState(1)
+ function Decreases_quantity(){
+    return setQuantity(quantity-1);
+ }
+ function Increases_quantity(){
+  return setQuantity(quantity+1);
+}
+product.quantity=quantity;
   return (
     <>
       <UrlLink ></UrlLink>
@@ -34,11 +41,16 @@ function ProductDetail({product,handelAddCart}) {
           </div>
           <div className={style.product_quanlity}>
             Số lượng:
-            <button className={style.product_quantity_btn}>
+            <button
+               className={style.product_quantity_btn} 
+                onClick={()=>{Decreases_quantity()}}
+            >
               <i className="fa-solid fa-minus"></i>
             </button>
-            <span>1</span>
-            <button className={style.product_quantity_btn}>
+            <span>{product?.quantity}</span>
+            <button className={style.product_quantity_btn }
+            
+            onClick={()=>{Increases_quantity()}}>
               <i className="fa-solid fa-plus"></i>
             </button>
           </div>

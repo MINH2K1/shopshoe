@@ -1,8 +1,9 @@
 import React from 'react'
 import style from './BoxColum.module.css'
+import clsx from 'clsx'
 function BoxColum({children}) {
   return (
-    <div className={style.boxcolum}>{children}</div>
+    <div className={clsx(style.boxcolum)}>{children}</div>
   )
 }
 

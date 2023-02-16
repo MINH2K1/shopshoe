@@ -1,14 +1,19 @@
-export const increases_quantity=(product)=>{
-    console.log(product)
+export const increases_quantity=(id,quantity)=>{
     return{
-        type:'INCREASE',
-        payload:product
+        type:'DECREASE_QUANTITY_ACTION',
+        payload:{
+            id,
+            quantity
+        }
     }
 }
-export const decreases_quantity=(product)=>{
+export const decreases_quantity=(id,quantity)=>{
     
     return{
-        type:'DECREASE',
-        payload:product
+        type:'DECREASE_QUANTITY_ACTION',
+        payload:{
+            id, 
+            quantity
+        }
     }
 }

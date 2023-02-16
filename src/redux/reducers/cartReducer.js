@@ -17,7 +17,14 @@ function cartReducer(state=initalState,action) {
             list:newList
         }
         } 
-    
+        case 'REMOVE_PRODUCT_ON_CART':{
+            const newList=[...state.list];
+            var newList2 = newList.filter((product) => product.id !== action.payload);
+        return {
+            ...state,
+            list:newList2
+        }
+        } 
         default: return state
     }
 }

@@ -3,14 +3,14 @@ const initalState= 1
 function quantityReducer(state=initalState,action) {
     switch(action.type)
     {
-        case 'DECREASE':{
+        case 'DECREASE_QUANTITY_ACTION':{
             state=state-1;
              action.payload.quantity= state+1;
         return {
             state,
         }
         } 
-        case 'INCREASE':{
+        case 'INCREASE_QUANTITY_ACTION':{
             state=state+1;
             action.payload.quantity= state;
             return {

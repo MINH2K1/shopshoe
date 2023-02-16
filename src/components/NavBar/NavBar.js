@@ -17,9 +17,9 @@ function NavBar() {
         <li className={style.navbar_item}>
         <Link to="/product">Loại Giày</Link>
         <ul className={style.submenu}>
-            <li className={style.subitem}>Nike</li>
-            <li className={style.subitem}>Adidas</li>
-            <li className={style.subitem}>puma</li>
+            <li className={style.subitem}>Vans</li>
+            <li className={style.subitem}>Convers</li>
+            <li className={style.subitem}>Boot</li>
           </ul>
         </li>
         <li className={style.navbar_item}> <Link to ='/connect'>Liên Hệ</Link> </li>
