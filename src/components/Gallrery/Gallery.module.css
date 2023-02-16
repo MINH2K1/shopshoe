@@ -2,28 +2,27 @@
     height: 350px;
     width: 100%;
     margin: auto;
-    display: flex;
-    justify-content: space-around;
     position: relative;
-   background-color: #fff;
-   overflow: hidden;
+    background-color: #fff;
+    overflow: hidden;
 }
 .gallery_list{
     display: flex;
     overflow: hidden;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .gallery_next{
     position: absolute;
     top: 50%;
-    right: 10px;
     transform: translateY(-50%);
+    right: 5px;
 }
 .gallery_prev{
     position: absolute;
     top: 50%;
-    left: 10px;
     transform: translateY(-50%);
+    left: 5px;
 }
+
+

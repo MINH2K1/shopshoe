@@ -11,9 +11,9 @@ function ContentDetail({paragrap,convers}) {
   return (
     <div className={classes}>
         <img className={style.contentdetail_img} src={paragrap.img} alt="thanhlich"/>
-        <div class={style.contentdetail_body}>
+        <div className={style.contentdetail_body}>
             <TextHeading>{paragrap.title}</TextHeading>
-            <p class={style.contentdetail_text}>
+            <p className={style.contentdetail_text}>
               {paragrap.text}
             </p>
             <TextHeading >

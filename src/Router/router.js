@@ -7,6 +7,7 @@ import Header from "../components/Header/Header";
 import Connect from '../page/Connect/Connect';
 import Cart from '../page/Cart/Cart';
 import Product from '../page/ProductDetail/Product';
+import Invoice from '../page/Invoices/Invoice';
 function router() {
   return (
     <>
@@ -20,6 +21,7 @@ function router() {
         <Route path={'product/:id'} element={<Product/>}></Route>
         <Route path='/connect' element={<Connect/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
+        <Route path='/invoice' element={<Invoice/>}></Route>
     </Routes>
     </>
     
