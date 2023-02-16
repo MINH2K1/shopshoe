@@ -1,9 +1,10 @@
 import clsx from 'clsx'
 import React from 'react'
 import style from './ButtonSquare.module.css'
-function ButtonSquare({children, className}) {
+import { Link } from 'react-router-dom'
+function ButtonSquare({children,product ,className,onClick,param}) {
   return (
-    <div className={ clsx(style.buttonsquare,className)}>{children}</div>
+    <div  onClick={()=>onClick(product)} className={ clsx(style.buttonsquare,className)}><Link to={param}>{children}</Link></div>
   )
 }
 export default ButtonSquare

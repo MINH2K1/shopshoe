@@ -17,7 +17,7 @@ function ContentDetail({paragrap,convers}) {
               {paragrap.text}
             </p>
             <TextHeading >
-            <Link to='/category'> XEM TẤT CẢ <i class="fa-solid fa-angle-right"></i></Link> 
+            <Link to='/category'> XEM TẤT CẢ <i className="fa-solid fa-angle-right"></i></Link> 
             </TextHeading>
           </div>
     </div>

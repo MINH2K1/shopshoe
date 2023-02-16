@@ -1,0 +1,11 @@
+.boxcolum{
+    width: 70%;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}

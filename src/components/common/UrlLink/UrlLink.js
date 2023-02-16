@@ -1,12 +1,11 @@
 import React from 'react'
 import style from './UrlLink.module.css'
- import { useLocation } from 'react-router-dom';
+
 function UrlLink(props) {
 
-const search = useLocation().search;
-console.log(search);
+const search = window.location.pathname;
   return (
-    <div className={style.urllink}>Trang chủ/product</div>
+    <div className={style.urllink}>Trang Chủ {search}</div>
   )
 }
 export default UrlLink

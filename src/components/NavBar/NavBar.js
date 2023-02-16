@@ -7,7 +7,7 @@ function NavBar() {
       <ul className={style.navbar_menu}>
         <li className={style.navbar_item}><Link to="/Home"> Trang Chủ</Link> </li>
         <li className={style.navbar_item}>
-          Thể Loại
+        Thương Hiệu
           <ul className={style.submenu}>
             <li className={style.subitem}>Nike</li>
             <li className={style.subitem}>Adidas</li>
@@ -15,7 +15,7 @@ function NavBar() {
           </ul>
         </li>
         <li className={style.navbar_item}>
-        <Link to="/product">Chi tiết</Link>
+        <Link to="/product">Loại Giày</Link>
         <ul className={style.submenu}>
             <li className={style.subitem}>Nike</li>
             <li className={style.subitem}>Adidas</li>

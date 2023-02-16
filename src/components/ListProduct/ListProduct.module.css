@@ -1,0 +1,16 @@
+.listcontainer{
+display: flex;
+height: auto;
+width: 95%;
+margin: auto;
+margin-top: 10px;
+height: 600px;
+}
+.sliderproduct{
+    flex: 2;
+
+}
+.listproduct{
+flex: 5;
+box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}

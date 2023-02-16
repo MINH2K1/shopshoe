@@ -1,9 +1,11 @@
 .buttonsquare{
     width: 100px;
     height: 40px;
+    line-height: 40px;
+    margin: auto;
     background-color: red;
     color: #fff;
-    text-align: center;
+    text-align: center ;
 }
 .buttonsquare:hover{
     cursor: pointer;

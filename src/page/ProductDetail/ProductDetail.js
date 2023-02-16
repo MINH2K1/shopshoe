@@ -1,18 +1,19 @@
 import style from "./ProductDetail.module.css";
-import React from "react";
-import product from "../../data/product.js";
+import React from "react"
 import UrlLink from "../../components/common/UrlLink/UrlLink";
 import ButtonSquare from "../../components/common/ButtonSquare/ButtonSquare";
-function ProductDetail() {
+
+function ProductDetail({product,handelAddCart}) {
+
   return (
     <>
-      <UrlLink urllink={window.location.search}></UrlLink>
+      <UrlLink ></UrlLink>
       <div className={style.product_detail}>
         <div className={style.product_img}>
           <img
             className={style.product_url}
-            alt="Ảnh product"
             src={product.url}
+            alt="product"
           />
         </div>
         <div className={style.product_content}>
@@ -34,11 +35,11 @@ function ProductDetail() {
           <div className={style.product_quanlity}>
             Số lượng:
             <button className={style.product_quantity_btn}>
-              <i class="fa-solid fa-minus"></i>
+              <i className="fa-solid fa-minus"></i>
             </button>
             <span>1</span>
             <button className={style.product_quantity_btn}>
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </button>
           </div>
 
@@ -46,20 +47,11 @@ function ProductDetail() {
             Kích Thước :
             <select className={style.product_select}>
               <option value="30">30</option>
-              <option value="30">31</option>
-              <option value="30">33</option>
-              <option value="30">34</option>
-              <option value="30">35</option>
-              <option value="30">37</option>
-              <option value="30">38</option> 
-              <option value="30">39</option>
-              <option value="30">40</option> 
-              <option value="30">41</option>
             </select>
           </div>
           <div className={style.btn}>
           <ButtonSquare>Mua Ngay</ButtonSquare>
-          <ButtonSquare>Add Giỏ hàng</ButtonSquare>
+          <ButtonSquare product={product} param={'/cart'} onClick={handelAddCart}  >Add Giỏ hàng</ButtonSquare>
           </div>
         </div>
         <div className={style.product_slider}></div>
@@ -68,4 +60,4 @@ function ProductDetail() {
   );
 }
 
-export default ProductDetail;
+export default (ProductDetail);

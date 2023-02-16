@@ -2,10 +2,11 @@ import React from "react";
 import style from "./Header.module.css";
 import clsx from "clsx";
 import Button from "../common/Button/Button";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className={style.header}>
-      <img className={style.header_logo} src="./img/logo.png" alt="logo" />
+      <img className={style.header_logo} src="/img/logo.png" alt="logo" />
       <div className={style.header_content}>
         <div className={style.header_input}>
           <input className={style.header_input_item} placeholder="Tìm Kiếm" />
@@ -22,13 +23,25 @@ function Header() {
             <div className={style.header_content_text}>Gọi ngay 0833832976</div>
           </div>
           <Button className={style.header_contact_icon}>
-            <i class="fa-solid fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
           </Button>
-          </div>
-          <Button><i class="fa-sharp fa-solid fa-user"></i></Button>
-          <Button><i class="fa-sharp fa-solid fa-cart-plus"> </i></Button>
-       
-        <div className=""></div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            width: "150px",
+            justifyContent:"space-around"
+          }}
+        >
+          <Button>
+            <i className="fa-sharp fa-solid fa-user"></i>
+          </Button>
+          <Button>
+            <Link to="/cart">
+              <i className="fa-sharp fa-solid fa-cart-plus"> </i>
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
