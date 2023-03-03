@@ -7,8 +7,6 @@ import { addCart } from "../../redux/actions/addproduct";
 
 function Product() {
   const params = useParams();
-  // console.log(params);
-  // console.log(data)
   const product = data.find((itemfind) => {
     return itemfind.id === Number(params.id);
   });
@@ -16,7 +14,7 @@ function Product() {
   const cartList = useSelector((state) => state.cart.list);
   const dispatch = useDispatch();
   function handelAddCart(product) {
-    if (cartList.filter((item) => item.id === product.id).length===0) {
+    if (cartList.filter((item) => item.id === product.id).length === 0) {
       const action = addCart(product);
       dispatch(action);
     } else {

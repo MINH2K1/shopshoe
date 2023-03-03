@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
-import TextHeading from '../common/TextHeading/TextHeading'
+import TextHeading from '../../common/TextHeading/TextHeading'
 import style from "./ContentDetail.module.css"
 import { Link } from 'react-router-dom'
 function ContentDetail({paragrap,convers}) {

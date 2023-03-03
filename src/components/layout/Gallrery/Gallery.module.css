@@ -1,4 +1,4 @@
-.gallery{
+.gallery {
     height: 350px;
     width: 100%;
     margin: auto;
@@ -6,23 +6,24 @@
     background-color: #fff;
     overflow: hidden;
 }
-.gallery_list{
+
+.gallery_list {
+    width: 95%;
     display: flex;
-    overflow: hidden;
-    align-items: center;  
+    align-items: center;
+    overflow: visible
 }
 
-.gallery_next{
+.gallery_next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 5px;
 }
-.gallery_prev{
+
+.gallery_prev {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 5px;
 }
-
-

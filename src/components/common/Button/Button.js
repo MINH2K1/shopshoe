@@ -1,13 +1,13 @@
-import React from 'react'
-import clsx from 'clsx'
-import button from "./Button.module.css"
+import React from "react";
+import clsx from "clsx";
+import button from "./Button.module.css";
 
-
-function Button({handel,className,children }) { 
-  
+function Button({ handel, className, children }) {
   return (
-    <div  className={clsx(className,button.button)}  onClick={handel}>{children}</div>
-  )
+    <div className={clsx(className, button.button)} onClick={() => handel()}>
+      {children}
+    </div>
+  );
 }
 
-export default Button
+export default Button;

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./ProductItem.module.css";
-
-function ProductItem({item}) {
+import clsx from "clsx";
+function ProductItem({active,item}) {
   return (
-    <div className={style.product_item}>
+    <div className= {clsx(style.product_item,{active})}>
       <div className={style.product_img}>
         {" "}
         <img

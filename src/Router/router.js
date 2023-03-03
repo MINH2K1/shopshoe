@@ -8,6 +8,7 @@ import Connect from '../page/Connect/Connect';
 import Cart from '../page/Cart/Cart';
 import Product from '../page/ProductDetail/Product';
 import Invoice from '../page/Invoices/Invoice';
+import Singin from '../page/Auth/Singin/Singin';
 function router() {
   return (
     <>
@@ -17,6 +18,7 @@ function router() {
   
     <Routes>
         <Route path='/' element={<Home/>} exact></Route>
+        <Route path='/Singin' element={<Singin/> }></Route>
         <Route path='/Home' element={<Home/> }></Route>
         <Route path={'product/:id'} element={<Product/>}></Route>
         <Route path='/connect' element={<Connect/>}></Route>

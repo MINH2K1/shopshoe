@@ -7,6 +7,7 @@ import style from "./Cart.module.css";
 import { removeCart } from "../../redux/actions/addproduct";
 
 import Total from "../../components/common/Total/Total";
+
 function Cart() {
   //store-redux
   var cartListStore = useSelector((state) => state.cart.list);
@@ -40,46 +41,49 @@ function Cart() {
   console.log(cartListStore);
 
   return (
-    <BoxColum className={style.box}>
-      <div
-        style={{
-          color: "red",
-          fontSize: "25px",
-          textAlign: "center",
-          marginBottom: "20px",
-        }}
-      >
-        Giỏ Hàng
-      </div>
-      <table className={style.table}>
-        <thead>
-          <tr>
-            <td>Id</td>
-            <td>Ảnh</td>
-            <td>tên</td>
-            <td>Số lượng</td>
-            <td>Giá</td>
-            <td>Đơn Giá</td>
-            <td>Xóa</td>
-          </tr>
-        </thead>
-        <tbody>
-          {cartListStore.map((item) => (
-            <ProductCart
-              removeProduct={removeProduct}
-              key={item.id}
-              data={item}
-              totalfn={totalfn}
-            ></ProductCart>
-          ))}
-        </tbody>
-      </table>
-
-      <Total className={style.total} totalcart={total}></Total>
-      <ButtonSquare className={style.buynow} param={"/invoice"}>
-        Mua Ngay
-      </ButtonSquare>
-    </BoxColum>
+    <div className={style.cartbox}>
+      <BoxColum className={style.box}>
+        <div
+          style={{
+            color: "red",
+            fontSize: "25px",
+            textAlign: "center",
+            marginBottom: "20px",
+          }}
+        >
+          Giỏ Hàng
+        </div>
+        <table className={style.table} >
+          <thead>
+            <tr>
+              <td>Id</td>
+              <td>Ảnh</td>
+              <td>tên</td>
+              <td>Số lượng</td>
+              <td>Giá</td>
+              <td>Đơn Giá</td>
+              <td>Xóa</td>
+            </tr>
+          </thead>
+          <tbody>
+            {cartListStore.map((item) => (
+              <ProductCart
+                removeProduct={removeProduct}
+                key={item.id}
+                data={item}
+                totalfn={totalfn}
+              ></ProductCart>
+            ))}
+          </tbody>
+        </table>
+        <div className={style.bottombox}>
+          <Total className={style.total} totalcart={total}></Total>
+          <ButtonSquare className={style.buynow} param={"/invoice"}>
+            Mua Ngay
+          </ButtonSquare>
+        </div>
+      </BoxColum>
+    </div>
   );
 }
 export default Cart;
