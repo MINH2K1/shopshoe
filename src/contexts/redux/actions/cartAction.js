@@ -7,7 +7,6 @@ export const addCart=(product)=>{
     }
 }
 export const removeCart=(id)=>{
- 
     return{
         type:'REMOVE_PRODUCT_ON_CART',
         payload: id

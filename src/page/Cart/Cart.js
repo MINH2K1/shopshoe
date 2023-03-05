@@ -1,68 +1,45 @@
 import React, { useEffect, useState } from "react";
 import BoxColum from "../../components/common/BoxColum/BoxColum";
-import ProductCart from "../../components/common/ProductCart/ProductCart";
+import ProductCart from "../../components/container/ProductCart/ProductCart";
 import { useDispatch, useSelector } from "react-redux";
 import ButtonSquare from "../../components/common/ButtonSquare/ButtonSquare";
 import style from "./Cart.module.css";
-import { removeCart } from "../../redux/actions/addproduct";
-
+import { removeCart } from "../../contexts/redux/actions/cartAction";
 import Total from "../../components/common/Total/Total";
-
+import { cartTitle } from "../../data/constants";
 function Cart() {
   //store-redux
   var cartListStore = useSelector((state) => state.cart.list);
-
-  //cart List in cart
-
+  var total = useSelector((state) => state.cart.total);
   var dispatch = useDispatch();
   function removeProduct(id) {
     var removeaction = removeCart(id);
     dispatch(removeaction);
   }
-
-  // totail cart
-  var totalcart = cartListStore.reduce((total, item) => {
-    return (total = total + item.quantity * item.price);
-  }, 0);
-  const [total, setTotal] = useState(totalcart);
-
-  function totalfn(totalcart) {
-    totalcart = cartListStore.reduce((total, item) => {
-      return (total = total + item.quantity * item.price);
-    }, 0);
-    setTotal(totalcart);
-  }
-  useEffect(() => {
-    setTotal(totalcart);
-  }, [cartListStore]);
-
-  //useRedux Cart
-
-  console.log(cartListStore);
-
   return (
     <div className={style.cartbox}>
+      <div
+        className={style.cart__titlte}
+        style={{
+          color: "red",
+          fontSize: "25px",
+          textAlign: "center",
+          marginBottom: "20px",
+        }}
+      >
+        Giỏ Hàng
+      </div>
       <BoxColum className={style.box}>
-        <div
-          style={{
-            color: "red",
-            fontSize: "25px",
-            textAlign: "center",
-            marginBottom: "20px",
-          }}
-        >
-          Giỏ Hàng
-        </div>
-        <table className={style.table} >
+        <table className={style.table}>
           <thead>
             <tr>
-              <td>Id</td>
-              <td>Ảnh</td>
-              <td>tên</td>
-              <td>Số lượng</td>
-              <td>Giá</td>
-              <td>Đơn Giá</td>
-              <td>Xóa</td>
+              <td>{cartTitle.ID}</td>
+              <td>{cartTitle.IMG}</td>
+              <td>{cartTitle.NAME}</td>
+              <td>{cartTitle.PRICE}</td>
+              <td>{cartTitle.QUANTITY}</td>
+              <td>{cartTitle.TOTAL}</td>
+              <td>{cartTitle.ACTION}</td>
             </tr>
           </thead>
           <tbody>
@@ -71,7 +48,6 @@ function Cart() {
                 removeProduct={removeProduct}
                 key={item.id}
                 data={item}
-                totalfn={totalfn}
               ></ProductCart>
             ))}
           </tbody>

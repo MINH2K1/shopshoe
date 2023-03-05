@@ -1,9 +1,9 @@
 import React from "react";
-import data from "../../data/productlistapi";
+import data from "../../service/productApi/productlistapi";
 import ProductDetail from "./ProductDetail";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addCart } from "../../redux/actions/addproduct";
+import { addCart } from "../../contexts/redux/actions/cartAction";
 
 function Product() {
   const params = useParams();

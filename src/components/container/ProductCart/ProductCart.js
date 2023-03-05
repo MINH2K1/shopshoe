@@ -1,34 +1,33 @@
 import React, { useReducer } from "react";
-import Quantity from "../Quantity/Quantity";
+import Quantity from "../../common/Quantity/Quantity";
 import style from "./ProductCart.module.css";
-import Button from "../ButtonSquare/ButtonSquare.js";
-function ProductCart({ removeProduct, data,totalfn }) {
+import Button from "../../common/ButtonSquare/ButtonSquare.js";
+function ProductCart({ removeProduct, data, totalfn }) {
   const UP_ACTION = "up";
   const DOWN_ACTION = "down";
-  var initstate = data.quantity
-  const reducer =(status,action) => {
+  var initstate = data.quantity;
+  const reducer = (status, action) => {
     switch (action) {
       case UP_ACTION: {
-        return  status+1;
+        return status + 1;
       }
       case DOWN_ACTION: {
-        return status-1;
+        return status - 1;
       }
       default:
         throw new Error("lôiz");
     }
   };
-  const [counts, dispatch] = useReducer(reducer,initstate);
-  data.quantity=counts
-  const IncreaseCartQuantity=async()=> {
+  const [counts, dispatch] = useReducer(reducer, initstate);
+  data.quantity = counts;
+  const IncreaseCartQuantity = async () => {
     await dispatch(UP_ACTION);
-    totalfn()
-  }
-  const  DecreaseCartQuantity= async()=> {
-    if(counts>1)
-   await dispatch(DOWN_ACTION);
-    totalfn()
-  }
+    totalfn();
+  };
+  const DecreaseCartQuantity = async () => {
+    if (counts > 1) await dispatch(DOWN_ACTION);
+    totalfn();
+  };
 
   return (
     <tr>

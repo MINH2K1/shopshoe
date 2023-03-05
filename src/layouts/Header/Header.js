@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Header.module.css";
 import clsx from "clsx";
-import Button from "../../common/Button/Button";
+import Button from "../../components/common/Button/Button";
 import { Link } from "react-router-dom";
 function Header() {
   return (

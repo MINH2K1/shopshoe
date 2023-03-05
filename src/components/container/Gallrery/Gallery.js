@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../common/Button/Button";
-import ProductItem from "../../common/ProductItem/ProductItem";
+import ProductItem from "../ProductItem/ProductItem";
 import style from "./Gallery.module.css";
 import styled, { keyframes } from "styled-components";
 function Gallery({ gallery }) {

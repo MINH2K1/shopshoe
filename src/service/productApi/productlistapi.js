@@ -5,10 +5,7 @@ const data = [
     name: "Giày Nike Nam Chính Hãng - Nike Revolution 6 Next Nature - Xanh | JapanSport DC3728-401",
     price: 1200000,
     discount: 20000,
-    quantity: 1,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
-  },
+    quantity: 1,  },
   {
     id: 2,
     url: "/img/Nike02.png",
@@ -16,8 +13,6 @@ const data = [
     price: 1200000,
     discount: 20000,
     quantity: 1,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
   },
   {
     id: 3,
@@ -26,8 +21,6 @@ const data = [
     price: 1500000,
     quantity: 1,
     discount: 3000000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
   },
   {
     id: 4,
@@ -36,8 +29,6 @@ const data = [
     price: 1200000,
     quantity: 1,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
   },
   {
     id: 5,
@@ -46,8 +37,6 @@ const data = [
     name: "Giày Nike Nam Chính Hãng - Nike Revolution 6 Next Nature - Xanh | JapanSport DC3728-401",
     price: 1200000,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
   },
   {
     id: 6,
@@ -56,8 +45,6 @@ const data = [
     price: 1200000,
     quantity: 1,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
   },
   {
     id: 7,
@@ -66,8 +53,6 @@ const data = [
     price: 1200000,
     quantity: 1,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
   },
   {
     id: 8,
@@ -76,8 +61,7 @@ const data = [
     price: 1200000,
     quantity: 1,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
+
   },
   {
     id: 9,
@@ -86,8 +70,7 @@ const data = [
     price: 1200000,
     quantity: 1,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
+
   },
   {
     id: 10,
@@ -96,8 +79,7 @@ const data = [
     price: 1200000,
     quantity: 1,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
+   
   },
   {
     id: 11,
@@ -106,8 +88,6 @@ const data = [
     price: 1200000,
     quantity: 1,
     discount: 20000,
-    color: ["red", "black", "blue"],
-    size: [40, 41, 42],
   },
   {
     id: 12,
